@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Masti Club - Premium Models & Videos</title>
+    <style>
+        /* Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #0b0b0f; color: #ffffff; overflow-x: hidden; }
+        
+        /* Age Verification Popup */
+        #age-gate { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(11, 11, 15, 0.98); z-index: 9999; display: flex; justify-content: center; align-items: center; text-align: center; padding: 20px; }
+        .gate-box { background: #13131a; padding: 40px; border-radius: 15px; border: 1px solid #ff007f; max-width: 500px; box-shadow: 0 0 30px rgba(255, 0, 127, 0.2); }
+        .gate-box h2 { color: #ff007f; margin-bottom: 15px; font-size: 28px; letter-spacing: 1px; }
+        .gate-box p { margin-bottom: 25px; color: #a0a0a0; font-size: 16px; line-height: 1.5; }
+        .gate-btn { background: #ff007f; color: white; border: none; padding: 12px 35px; font-size: 18px; font-weight: bold; border-radius: 25px; cursor: pointer; transition: 0.3s; margin: 10px; }
+        .gate-btn:hover { background: #e0006c; box-shadow: 0 0 15px rgba(255, 0, 127, 0.4); }
+        .exit-btn { background: #222; color: #aaa; }
+
+        /* Header Style */
+        header { text-align: center; padding: 50px 20px; background: linear-gradient(to bottom, #13131a, #0b0b0f); border-bottom: 1px solid #222; }
+        header h1 { font-size: 38px; color: #ff007f; text-shadow: 0 0 15px rgba(255,0,127,0.4); letter-spacing: 1px; }
+        header p { color: #a0a0a0; margin-top: 12px; font-size: 16px; font-weight: 400; }
+
+        /* Main Container */
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        
+        /* Section Heading */
+        .section-title { font-size: 24px; color: #ff007f; margin-bottom: 30px; border-left: 4px solid #ff007f; padding-left: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Grid System */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        
+        /* Premium Card Design */
+        .card { background: #13131a; border-radius: 12px; overflow: hidden; border: 1px solid #222; transition: all 0.3s ease; position: relative; }
+        .card:hover { transform: translateY(-8px); border-color: #ff007f; box-shadow: 0 10px 20px rgba(255, 0, 127, 0.1); }
+        
+        /* Thumbnail / Profile Picture Area */
+        .thumbnail-container { position: relative; width: 100%; height: 260px; background: #1a1a24; overflow: hidden; }
+        .thumbnail { width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.75; transition: 0.3s; }
+        .card:hover .thumbnail { filter: blur(6px); opacity: 0.6; }
+        
+        /* Badges */
+        .video-count { position: absolute; top: 15px; left: 15px; background: rgba(0, 0, 0, 0.75); color: #fff; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; border: 1px solid #ff007f; }
+        .status-badge { position: absolute; top: 15px; right: 15px; background: #ff007f; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
+        
+        /* Lock Overlay Overlay */
+        .lock-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background: rgba(0,0,0,0.2); }
+        .lock-icon { font-size: 42px; margin-bottom: 8px; filter: drop-shadow(0 0 10px rgba(0,0,0,0.5)); }
+        
+        /* Card Info */
+        .card-info { padding: 22px; text-align: center; }
+        .card-info h3 { font-size: 20px; margin-bottom: 6px; color: #ffffff; font-weight: 600; }
+        .card-info .tags { font-size: 13px; color: #ff007f; margin-bottom: 18px; font-weight: 500; }
+        
+        /* Unlock Action Button */
+        .cta-btn { display: inline-block; width: 100%; background: #25d366; color: white; text-decoration: none; padding: 13px; font-weight: bold; border-radius: 8px; transition: 0.3s; font-size: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .cta-btn:hover { background: #20ba5a; box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+        
+        /* Footer Community Channels Box */
+        .channels-box { background: #13131a; padding: 40px 20px; border-radius: 12px; text-align: center; margin-top: 60px; border: 1px solid #222; }
+        .channels-box h2 { margin-bottom: 12px; color: #ff007f; font-size: 26px; }
+        .channels-box p { color: #aaa; margin-bottom: 25px; font-size: 15px; }
+        .btn-link { display: inline-block; padding: 13px 35px; margin: 10px; font-weight: bold; border-radius: 25px; text-decoration: none; color: white; min-width: 220px; transition: 0.3s; font-size: 15px; }
+        .tg-btn { background: #0088cc; }
+        .tg-btn:hover { background: #0077b5; box-shadow: 0 0 15px rgba(0, 136, 204, 0.4); }
+        .wa-btn { background: #25d366; }
+        .wa-btn:hover { background: #20ba5a; box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+    </style>
+</head>
+<body>
+
+    <!-- Age Gate (Popup) -->
+    <div id="age-gate">
+        <div class="gate-box">
+            <h2>⚠️ AGE VERIFICATION</h2>
+            <p>This website contains sensual and adult content intended only for individuals aged 18 years or older. Do you wish to proceed?</p>
+            <button class="gate-btn" onclick="acceptAge()">I am 18 or Older</button>
+            <button class="gate-btn exit-btn" onclick="window.location.href='https://google.com'">Exit</button>
+        </div>
+    </div>
+
+    <!-- Website Header -->
+    <header>
+        <h1>👑 VIP MASTI CLUB 👑</h1>
+        <p>Get instant access to private, uncut, and exclusive premium models video library.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Girls Section Heading -->
+        <h2 class="section-title">Active Models & Leaked Playlists</h2>
+        
+        <!-- Video Catalog / Girls List Grid -->
+        <div class="grid">
+            
+            <!-- Girl Card 1 -->
+            <div class="card">
+                <div class="thumbnail-container">
+                    <span class="video-count">📹 14 Videos</span>
+                    <span class="status-badge">Hot Updates</span>
+                    <!-- Model image preview link (Blurred style) -->
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500" alt="Model Preview">
+                    <div class="lock-overlay">
+                        <span class="lock-icon">🔒</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Ayesha Khan (MMS Private)</h3>
+                    <div class="tags">Viral Leaked • Full HD • Uncut</div>
+                    <!-- WhatsApp Redirect Link with auto text -->
+                    <a href="https://wa.me/923461263524?text=Hi,%20I%20want%20to%20unlock%20Ayesha%20Khan%20Premium%20Videos" target="_blank" class="cta-btn">Unlock Full Playlist 🔓</a>
+                </div>
+            </div>
+
+            <!-- Girl Card 2 -->
+            <div class="card">
+                <div class="thumbnail-container">
+                    <span class="video-count">📹 8 Videos</span>
+                    <span class="status-badge">Exclusive</span>
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=500" alt="Model Preview">
+                    <div class="lock-overlay">
+                        <span class="lock-icon">🔒</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Priya Sharma (Secret Show)</h3>
+                    <div class="tags">Home Video • Webseries • 4K Quality</div>
+                    <a href="https://wa.me/923461263524?text=Hi,%20I%20want%20to%20unlock%20Priya%20Sharma%20Secret%20Show" target="_blank" class="cta-btn">Unlock Full Video 🔓</a>
+                </div>
+            </div>
+
+            <!-- Girl Card 3 -->
+            <div class="card">
+                <div class="thumbnail-container">
+                    <span class="video-count">📹 21 Videos</span>
+                    <span class="status-badge">Trending</span>
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500" alt="Model Preview">
+                    <div class="lock-overlay">
+                        <span class="lock-icon">🔒</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h3>Sana Malik (Viral Clips)</h3>
+                    <div class="tags">Private Hotel Cam • Uncut HD</div>
+                    <a href="https://wa.me/923461263524?text=Hi,%20I%20want%20to%20unlock%20Sana%20Malik%20Viral%20Clips" target="_blank" class="cta-btn">Unlock Full Playlist 🔓</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Free Teaser Channels Join Sections -->
+        <div class="channels-box">
+            <h2>Join Our Free Teaser Channels 🔥</h2>
+            <p>Daily new updates, short clips, and model previews are posted here for free.</p>
+            <a href="https://t.me/leakedVideosofficial" target="_blank" class="btn-link tg-btn">Join Free Telegram</a>
+            <a href="https://whatsapp.com/channel/0029VbDAH6c1NCrX6CRHac00" target="_blank" class="btn-link wa-btn">Join Free WhatsApp</a>
+        </div>
+    </div>
+
+    <!-- JavaScript code for security popup -->
+    <script>
+        function acceptAge() {
+            document.getElementById('age-gate').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
