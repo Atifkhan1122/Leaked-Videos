@@ -36,7 +36,7 @@
         .card { background: #13131a; border-radius: 12px; overflow: hidden; border: 1px solid #222; transition: all 0.3s ease; position: relative; }
         .card:hover { transform: translateY(-8px); border-color: #ff007f; box-shadow: 0 10px 20px rgba(255, 0, 127, 0.1); }
         
-        /* Thumbnail Container (No Blur, Full Clear) */
+        /* Thumbnail Container */
         .thumbnail-container { position: relative; width: 100%; height: 320px; background: #1a1a24; overflow: hidden; }
         .thumbnail { width: 100%; height: 100%; object-fit: cover; filter: none; opacity: 1; transition: 0.3s; }
         
@@ -107,7 +107,6 @@
                 <div class="thumbnail-container">
                     <span class="video-count">📹 3 Videos</span>
                     <span class="status-badge">Actors</span>
-                    <!-- Fixed Space Issue -->
                     <img class="thumbnail" src="Rabi%20Pirzada.jpg" alt="Model Rabi Pirzada">
                 </div>
                 <div class="card-info">
@@ -122,7 +121,6 @@
                 <div class="thumbnail-container">
                     <span class="video-count">📹 2 Videos</span>
                     <span class="status-badge">Sindhi Tiktoker</span>
-                    <!-- Extension fixed if it matches GitHub case -->
                     <img class="thumbnail" src="Biya%20Shah.jpg" alt="Model Biya Shah">
                 </div>
                 <div class="card-info">
@@ -132,7 +130,7 @@
                 </div>
             </div>
 
-            <!-- Card 4 (Photo 3) -->
+            <!-- Card 4 (Sana Malik) -->
             <div class="card">
                 <div class="thumbnail-container">
                     <span class="video-count">📹 11 Videos</span>
@@ -146,12 +144,13 @@
                 </div>
             </div>
 
-            <!-- Card 5 (Photo 4) -->
+            <!-- Card 5 (Kiran Patel) -->
             <div class="card">
                 <div class="thumbnail-container">
                     <span class="video-count">📹 15 Videos</span>
                     <span class="status-badge">Viral</span>
-                    <img class="thumbnail" src="Stella%20Marisol.jpg" alt="Model 4">
+                    <!-- Fixed to use 4.jpg from repository -->
+                    <img class="thumbnail" src="4.jpg" alt="Model 4">
                 </div>
                 <div class="card-info">
                     <h3>Kiran Patel</h3>
@@ -165,7 +164,8 @@
                 <div class="thumbnail-container">
                     <span class="video-count">📹 9 Videos</span>
                     <span class="status-badge">Tiktoker</span>
-                    <img class="thumbnail" src="Stella%20Marisol.jpg" alt="Model Stella Marisol">
+                    <!-- Fixed spelling and extension (.jpeg) to match GitHub file -->
+                    <img class="thumbnail" src="Stella%20Mariso.jpg" alt="Model Stella Marisol">
                 </div>
                 <div class="card-info">
                     <h3>Stella Marisol</h3>
@@ -207,7 +207,6 @@
                 <div class="thumbnail-container">
                     <span class="video-count">📹 3 Videos</span>
                     <span class="status-badge">Private</span>
-                    <!-- Fixed Space Issue -->
                     <img class="thumbnail" src="ALINA%20AMIR.jpg" alt="Leaked">
                 </div>
                 <div class="card-info">
@@ -222,14 +221,13 @@
                 <div class="thumbnail-container">
                     <span class="video-count">📹 3 Videos</span>
                     <span class="status-badge">Sindhi Tiktoker</span>
-                    <!-- Fixed Space Issue -->
                     <img class="thumbnail" src="Soomal%20Rajper.jpg" alt="Leaked">
                 </div>
                 <div class="card-info">
                     <h3>Soomal Rajper</h3>
                     <div class="tags">Persnal Leaked • Full HD • Uncut</div>
                     <a href="https://wa.me/923461263524?text=Hi,%20I%20want%20to%20unlock%20Soomal%20Rajper%20Videos" target="_blank" class="cta-btn">Watch Videos 🔓</a>
-               </div>
+                </div>
             </div>
                 
         </div>
@@ -245,11 +243,6 @@
 
     <!-- JavaScript code for security popup -->
     <script>
-        function acceptAge() {
-            document.getElementById('age-gate').style.style.display = 'none';
-        }
-        
-        // Auto-fix for local testing age gate style fallback
         function acceptAge() {
             document.getElementById('age-gate').style.display = 'none';
         }
